@@ -23,3 +23,10 @@ function obtenerArrayConstructor() {
     // Devolver el constructor del array
     return arrayConstructor;
 }
+// Función para copiar los primeros dos colores en las posiciones 2 y 3 del array
+function copiarColoresEnArray() {
+    let colores = ["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"];
+    // Usar el método copyWithin() para copiar los primeros dos colores en las posiciones 2 y 3
+    let coloresCopiados = colores.copyWithin(2, 0);
+    return coloresCopiados;
+}
