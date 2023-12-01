@@ -4,13 +4,13 @@ Este repositorio contiene los ejercicios realizados durante las sesiones de la u
 
 ## Sesiones
 
-### [Sesión 1 - Ejercicios JavaScript](https://github.com/JostinCabascango/MP06_UF1_EntornoCliente/tree/sesion1)
+### [Sesión 1 - Ejercicios JavaScript](https://github.com/JostinCabascango/MP06_UF2_EntornoCliente/tree/sesion1)
 
-### [Sesión 2 - Ejercicios JavaScript](https://github.com/JostinCabascango/MP06_UF1_EntornoCliente/tree/sesion2)
+### [Sesión 2 - Ejercicios JavaScript](https://github.com/JostinCabascango/MP06_UF2_EntornoCliente/tree/sesion2)
 
-### [Sesión 3 - Ejercicios JavaScript](https://github.com/JostinCabascango/MP06_UF1_EntornoCliente/tree/sesion3)
+### [Sesión 3 - Ejercicios JavaScript](https://github.com/JostinCabascango/MP06_UF2_EntornoCliente/tree/sesion3)
 
-### [Sesión 4 - Ejercicios JavaScript](https://github.com/JostinCabascango/MP06_UF1_EntornoCliente/tree/sesion4)
+### [Sesión 4 - Ejercicios JavaScript](https://github.com/JostinCabascango/MP06_UF2_EntornoCliente/tree/sesion4)
 
 ### [Sesión 5 - Ejercicios JavaScript](https://github.com/JostinCabascango/MP06_UF1_EntornoCliente/tree/sesion5)
 
