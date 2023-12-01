@@ -15,3 +15,11 @@ function unirArraysDeColores() {
 
     return todosLosColores;
 }
+// Función para obtener el constructor del array
+function obtenerArrayConstructor() {
+    let colores = ["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"];
+    // Usar la propiedad constructor para obtener la función que creó el array
+    let arrayConstructor = colores.constructor;
+    // Devolver el constructor del array
+    return arrayConstructor;
+}
