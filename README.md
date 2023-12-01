@@ -49,10 +49,10 @@ Si prefieres trabajar desde el terminal, puedes clonar este repositorio y cambia
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/JostinCabascango/MP06_UF1_EntornoCliente.git
+git clone https://github.com/JostinCabascango/MP06_UF2_EntornoCliente.git
 
 # Cambiar al directorio del repositorio
-cd MP06_UF1_EntornoCliente
+cd MP06_UF2_EntornoCliente
 
 # Listar todas las ramas
 git branch -a
