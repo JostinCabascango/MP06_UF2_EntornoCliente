@@ -5,23 +5,28 @@ function manipularColores() {
 
     // Comprobar si todos los colores son menores que 'marrón'
     let todosMenores = sonTodosMenoresAMarron(colores);
-    console.log(todosMenores);
 
     // Filtrar los colores que son menores que 'marrón'
     let menores = filtraMenoresAMarron(colores);
-    console.log(menores);
 
     // Obtener los últimos dos colores del array
     let ultimosDos = obtenerUltimosDos(colores);
-    console.log(ultimosDos);
 
     // Agregar el color 'turquesa' al array
     colores = agregarColor(colores, 'turquesa');
-    console.log(colores);
 
     // Eliminar el color 'verde' del array
     colores = eliminarColorVerde(colores);
-    console.log(colores);
+
+    // Mostrar los resultados en html
+    const div = document.getElementById("Ejercicio1");
+    let contenido = "<p><b>Función que crea un array de 6 colores y probamos lo siguiente:</b></p>";
+    contenido += "<p>¿Todos los colores son menores que marrón? " + todosMenores + "</p>";
+    contenido += "<p>Los colores que son menores que marrón son: " + menores.join(', ') + "</p>";
+    contenido += "<p>Los últimos dos colores son: " + ultimosDos.join(', ') + "</p>";
+    contenido += "<p>El array con el color turquesa agregado es: " + colores.join(', ') + "</p>";
+    contenido += "<p>El array sin el color verde eliminado es: " + colores.join(', ') + "</p>";
+    div.innerHTML = contenido;
 }
 
 // Función que comprueba si todos los colores son menores que 'marrón'
