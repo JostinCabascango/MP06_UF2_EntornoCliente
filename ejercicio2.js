@@ -35,17 +35,32 @@ function obtenerIndicesYValores(colores) {
 }
 // Función para comprobar si todos los elementos pasan una prueba usando el método every()
 function comprobarSiTodosSonMenoresAMarron(colores) {
-    // Usar el método every() para comprobar si todos los elementos son menores que 'marrón'
-    let todosMenores = colores.every(color => color < 'marrón');
+    // Usar el método every() para comprobar si todos los elementos son menores que 'marron'
+    let todosMenores = colores.every(color => color < 'marron');
 
     return todosMenores;
 }
 // Función para rellenar un array con un valor usando el método fill()
 function rellenarArrayConMarron(colores) {
     // Usar el método fill() para rellenar el array con el color 'marrón'
-    colores.fill('marrón');
+    colores.fill('naranja');
 
     return colores;
+}
+// Función que crea un nuevo array con los elementos que pasan una prueba usando el método filter()
+function filtrarColores(colores) {
+    // Usar el método filter() para crear un nuevo array con los colores que son menores que 'marron'
+    let coloresFiltrados = colores.filter(color => color < 'marron');
+
+
+    return coloresFiltrados;
+}
+// Función que devuelve el primer valor que cumple una condición usando el método find()
+function encontrarColor(colores) {
+    // Usar el método find() para encontrar el primer color que es menor que 'marron'
+    let colorEncontrado = colores.find(color => color < 'marron');
+
+    return colorEncontrado;
 }
 function main() {
     const colores = ["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"];
@@ -76,7 +91,6 @@ function main() {
     contenidoCopyWithin += `<p>copia del metodo i sus parametros utilizados => <span>colores.copyWithin(2,0)</span></p>`;
     contenidoCopyWithin += `<p>Resultado al ejecutar el metodo => <span>${copiarColoresEnArray(colores).join(', ')}</span></p>`;
     divCopyWithin.innerHTML = contenidoCopyWithin;
-
     //------------------METODO entries() ------------------------------------
     let valores = "";
     for (let e of obtenerIndicesYValores(colores)) {
@@ -90,19 +104,28 @@ function main() {
     //------------------METODO every() ------------------------------------
     const divEvery = document.getElementById("every()");
     let contenidoEvery = `<p>Array Incial -> <span>${colores.join(', ')}</span></p>`;
-    contenidoEvery += `<p>copia del metodo i sus parametros utilizados => <span>colores.every(color => color < 'marrón')</span></p>`;
+    contenidoEvery += `<p>copia del metodo i sus parametros utilizados => <span>colores.every(color => color < 'marron')</span></p>`;
     contenidoEvery += `<p>Resultado al ejecutar el metodo => <span>${comprobarSiTodosSonMenoresAMarron(colores)}</span></p>`;
     divEvery.innerHTML = contenidoEvery;
     //------------------METODO fill() ------------------------------------
     const divFill = document.getElementById("fill()");
     let contenidoFill = `<p>Array Incial -> <span>${colores.join(', ')}</span></p>`;
-    contenidoFill += `<p>copia del metodo i sus parametros utilizados => <span>colores.fill('marrón')</span></p>`;
+    contenidoFill += `<p>copia del metodo i sus parametros utilizados => <span>colores.fill('naranja')</span></p>`;
     contenidoFill += `<p>Resultado al ejecutar el metodo => <span>${rellenarArrayConMarron(colores).join(', ')}</span></p>`;
     divFill.innerHTML = contenidoFill;
     //------------------METODO filter() ------------------------------------
-
-    //find()
-    //findIndex()
+    const divFilter = document.getElementById("filter()");
+    let contenidoFilter = `<p>Array Incial -> <span>${["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"].join(', ')}</span></p>`;
+    contenidoFilter += `<p>copia del metodo i sus parametros utilizados => <span>colores.filter(color => color < 'marron')</span></p>`;
+    contenidoFilter += `<p>Resultado al ejecutar el metodo => <span>${filtrarColores(["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"]).join(', ')}</span></p>`;
+    divFilter.innerHTML = contenidoFilter;
+    //------------------METODO find() ------------------------------------
+    const divFind=document.getElementById("find()")
+    let contenidoFind=``;
+    contenidoFilter+= ``;
+    contenidoFilter+=``;
+    divFind.innerHTML=contenidoFind;
+    //------------------METODO findIndex() ------------------------------------
     //flat()
     //flatMap()
     //forEach()
