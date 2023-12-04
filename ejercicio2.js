@@ -70,9 +70,16 @@ function encontrarIndiceDeColor(colores) {
     return indiceColor;
 }
 // Función que devuelve un nuevo array con los subarrays concatenados usando el método flat()
-function aplanarArrayDeColores(array) {
+function aplanarArrayDeNumeros(array) {
     // Usar el método flat() para aplanar el array
     let arrayAplanado = array.flat();
+
+    return arrayAplanado;
+}
+// Función que aplica una funcion a cada elemento y despues aplana el resultat en un nuevo array
+function aplanarArrayDeNumerosConFlatMap(array) {
+    // Usar el método flatMap() para aplanar el array
+    let arrayAplanado = array.flatMap(x => x, x * 2);
 
     return arrayAplanado;
 }
@@ -114,7 +121,7 @@ function main() {
     const divEntries = document.getElementById("entries()");
     let contenidoEntries = `<p>Array Incial -> <span>${colores.join(', ')}</span></p>`;
     contenidoEntries += `<p>copia del metodo i sus parametros utilizados => <span>colores.entries()</span></p>`;
-    contenidoEntries += `<p>Resultado al ejecutar el metodo =><span>${valores}</span></p>`;
+    contenidoEntries += `<p>Resultado al ejecutar el metodo =><span></span></p>`;
     divEntries.innerHTML = contenidoEntries;
     //------------------METODO every() ------------------------------------
     const divEvery = document.getElementById("every()");
@@ -151,9 +158,15 @@ function main() {
     const divFlat = document.getElementById("flat()");
     let contenidoFlat = `<p>Array Incial -> <span>${array.join(', ')}</span></p>`;
     contenidoFlat += `<p>copia del metodo i sus parametros utilizados => <span>colores.findIndex(color => color === 'Marron')</span></p>`;
-    contenidoFlat += `<p>Resultado al ejecutar el metodo => <span>${aplanarArrayDeColores($array)}</span></p>`;
+    contenidoFlat += `<p>Resultado al ejecutar el metodo => <span>${aplanarArrayDeNumeros
+        ($array)}</span></p>`;
     divFlat.innerHTML = contenidoFlat;
     //------------------METODO flatMap() ------------------------------------
+    const divFlatMap = document.getElementById("flatMap()");
+    let contenidoFlatMap = `<p>Array Incial -> <span>${array.join(', ')}</span></p>`;
+    contenidoFlatMap += ``;
+    contenidoFlatMap += `<p>Resultado al ejecutar el metodo => <span>${aplanarArrayDeNumerosConFlatMap($array)}</span></p>`;
+    divFlatMap.innerHTML = contenidoFlatMap;
     //------------------METODO forEach() ------------------------------------
     //------------------METODO from() ---------------------------------------
     //------------------Metodo includes()------------------------------------
