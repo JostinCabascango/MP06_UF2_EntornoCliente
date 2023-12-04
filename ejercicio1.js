@@ -20,12 +20,12 @@ function manipularColores() {
 
     // Mostrar los resultados en html
     const div = document.getElementById("Ejercicio1");
-    let contenido = "<p><b>Función que crea un array de 6 colores y probamos lo siguiente:</b></p>";
-    contenido += "<p>¿Todos los colores son menores que marrón? " + todosMenores + "</p>";
-    contenido += "<p>Los colores que son menores que marrón son: " + menores.join(', ') + "</p>";
-    contenido += "<p>Los últimos dos colores son: " + ultimosDos.join(', ') + "</p>";
-    contenido += "<p>El array con el color turquesa agregado es: " + colores.join(', ') + "</p>";
-    contenido += "<p>El array sin el color verde eliminado es: " + colores.join(', ') + "</p>";
+    let contenido = "<p>Función que crea un array de 6 colores y probamos lo siguiente:</p>";
+    contenido += `<p>¿Todos los colores son menores que marrón?<span>${todosMenores}</span></p>`;
+    contenido += `<p>Los colores que son menores que marrón son:<span>${menores.join(', ')}</span>`
+    contenido += `<p>Los últimos dos colores son:<span>${ultimosDos.join(', ')}</span></p>`
+    contenido += `<p>El array con el color turquesa agregado es:<span>${colores.join(', ')}</span></p>`
+    contenido += `<p>El array sin el color verde eliminado es: <span>${colores.join(', ')}</span></p>`
     div.innerHTML = contenido;
 }
 
