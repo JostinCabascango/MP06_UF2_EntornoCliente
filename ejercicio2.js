@@ -69,6 +69,14 @@ function encontrarIndiceDeColor(colores) {
 
     return indiceColor;
 }
+// Función que devuelve un nuevo array con los subarrays concatenados usando el método flat()
+function aplanarArrayDeColores(array) {
+    // Usar el método flat() para aplanar el array
+    let arrayAplanado = array.flat();
+
+    return arrayAplanado;
+}
+
 function main() {
     const colores = ["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"];
     let numeros = [1, 2, 3, 4, 5]
@@ -139,35 +147,37 @@ function main() {
     contenidoFindIndex += `<p>Resultado al ejecutar el metodo => <span>${encontrarIndiceDeColor(["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"])}</span></p>`;
     divFindIndex.innerHTML = contenidoFindIndex;
     //------------------METODO flat() ------------------------------------
-
-
-
-
-    //flatMap()
-    //forEach()
-    //from()
-    //includes()
-    //indexOf()
-    //isArray()
-    //join()
-    //keys()
-    //lastIndexOf()
-    //length
-    //map()
-    //pop()
-    //prototype
-    //push()
-    //reduce()
-    //reduceRight()
-    //reverse()
-    //shift()
-    //slice()
-    // some()
-    //sort()
-    //splice()
-    // toString()
-    //unshift()
-    //valueOf()
+    const array = [1, 2, [3, 4, [5, 6]]];
+    const divFlat = document.getElementById("flat()");
+    let contenidoFlat = `<p>Array Incial -> <span>${array.join(', ')}</span></p>`;
+    contenidoFlat += `<p>copia del metodo i sus parametros utilizados => <span>colores.findIndex(color => color === 'Marron')</span></p>`;
+    contenidoFlat += `<p>Resultado al ejecutar el metodo => <span>${aplanarArrayDeColores($array)}</span></p>`;
+    divFlat.innerHTML = contenidoFlat;
+    //------------------METODO flatMap() ------------------------------------
+    //------------------METODO forEach() ------------------------------------
+    //------------------METODO from() ---------------------------------------
+    //------------------Metodo includes()------------------------------------
+    //------------------Metodo indexOf()--------------------------------------
+    //------------------Metodo isArray()--------------------------------------
+    //------------------Metodo join()-----------------------------------------
+    //------------------Metodo keys()-----------------------------------------
+    //------------------Metodo lastIndexOf()----------------------------------
+    //------------------Metodo length-----------------------------------------
+    //------------------Metodo map()-----------------------------------------
+    //------------------Metodo pop()-----------------------------------------
+    //------------------Metodo prototype------------------------------------
+    //------------------Metodo push()-----------------------------------------
+    //------------------Metodo reduce()-----------------------------------------
+    //------------------Metodo reduceRight()------------------------------------
+    //------------------Metodo reverse()-----------------------------------------
+    //------------------Metodo shift()-----------------------------------------
+    //------------------Metodo slice()-----------------------------------------
+    //------------------Metodo some()-----------------------------------------
+    //------------------Metodo sort()-----------------------------------------
+    //------------------Metodo splice()-----------------------------------------
+    //------------------Metodo toString()-----------------------------------------
+    //------------------Metodo unshift()-----------------------------------------
+    //------------------Metodo valueOf()-----------------------------------------
 
 }
 main();
