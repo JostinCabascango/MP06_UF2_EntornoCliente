@@ -62,6 +62,13 @@ function encontrarColor(colores) {
 
     return colorEncontrado;
 }
+// Función que devuelve el índice del primer valor que cumple una condición usando el método findIndex()
+function encontrarIndiceDeColor(colores) {
+    // Usar el método findIndex() para encontrar el índice del primer color que es menor que 'marron'
+    let indiceColor = colores.findIndex(color => color < 'Marron');
+
+    return indiceColor;
+}
 function main() {
     const colores = ["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"];
     let numeros = [1, 2, 3, 4, 5]
@@ -120,13 +127,22 @@ function main() {
     contenidoFilter += `<p>Resultado al ejecutar el metodo => <span>${filtrarColores(["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"]).join(', ')}</span></p>`;
     divFilter.innerHTML = contenidoFilter;
     //------------------METODO find() ------------------------------------
-    const divFind=document.getElementById("find()")
-    let contenidoFind=``;
-    contenidoFilter+= ``;
-    contenidoFilter+=``;
-    divFind.innerHTML=contenidoFind;
+    const divFind = document.getElementById("find()")
+    let contenidoFind = `<p>Array Incial -> <span>${["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"].join(', ')}</span></p>`;
+    contenidoFind += `<p>copia del metodo i sus parametros utilizados => <span>colores.find(color => color < 'marron')</span></p>`;
+    contenidoFind += `<p>Resultado al ejecutar el metodo => <span>${encontrarColor(["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"])}</span></p>`;
+    divFind.innerHTML = contenidoFind;
     //------------------METODO findIndex() ------------------------------------
-    //flat()
+    const divFindIndex = document.getElementById("findIndex()");
+    let contenidoFindIndex = `<p>Array Incial -> <span>${["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"].join(', ')}</span></p>`;
+    contenidoFindIndex += `<p>copia del metodo i sus parametros utilizados => <span>colores.findIndex(color => color === 'Marron')</span></p>`;
+    contenidoFindIndex += `<p>Resultado al ejecutar el metodo => <span>${encontrarIndiceDeColor(["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"])}</span></p>`;
+    divFindIndex.innerHTML = contenidoFindIndex;
+    //------------------METODO flat() ------------------------------------
+
+
+
+
     //flatMap()
     //forEach()
     //from()
