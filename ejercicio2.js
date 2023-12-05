@@ -102,6 +102,13 @@ function crearArrayDesdeString(string) {
 
     return array;
 }
+// Función que comprueba si un array incluye un elemento usando el método includes()
+function comprobarSiIncluyeElemento(numeros, numero) {
+    // Usar el método includes() para comprobar si el array incluye el número
+    let incluye = numeros.includes(numero);
+
+    return incluye;
+}
 
 
 function main() {
@@ -200,6 +207,11 @@ function main() {
     contenidoFrom += `<p>Resultado al ejecutar el metodo => <span>${crearArrayDesdeString('jostin').join(', ')}</span></p>`;
     divFrom.innerHTML = contenidoFrom;
     //------------------Metodo includes()------------------------------------
+    const divIncludes = document.getElementById("includes()");
+    let contenidoIncludes = `<p>Array Incial -> <span> ${numeros}</span></p>`;
+    contenidoIncludes += `<p>copia del metodo i sus parametros utilizados => <span>numeros.includes(2)</span></p>`;
+    contenidoIncludes += `<p>Resultado al ejecutar el metodo => <span>${comprobarSiIncluyeElemento(numeros, 2)}</span></p>`;
+    divIncludes.innerHTML = contenidoIncludes;
     //------------------Metodo indexOf()--------------------------------------
     //------------------Metodo isArray()--------------------------------------
     //------------------Metodo join()-----------------------------------------
