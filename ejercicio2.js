@@ -130,6 +130,36 @@ function convertirArrayEnString(numeros) {
 
     return string;
 }
+// Función que devuelve un iterador de los índices de un array usando el método keys()
+function obtenerIteradorDeIndices(numeros) {
+    // Guardar el iterador de los índices del array en una variable
+    let claves=[];
+    for (let clave of numeros.keys()) {
+        claves.push(clave);
+    }
+    return claves;
+}
+// Función que devuelve el último índice de un elemento usando el método lastIndexOf() si no existe devuelve -1
+function encontrarUltimoIndiceDeElemento(numeros, numero) {
+    // Usar el método lastIndexOf() para encontrar el último índice del número
+    let indice = numeros.lastIndexOf(numero);
+
+    return indice;
+}
+// Función que devuelve el número de elementos de un array usando la propiedad length
+function obtenerNumeroDeElementos(numeros) {
+    // Usar la propiedad length para obtener el número de elementos del array
+    let numeroElementos = numeros.length;
+
+    return numeroElementos;
+}
+// Función que crea un nuevo array con los resultados de aplicar una función a cada elemento usando el método map()
+function aplicarFuncionANumeros(numeros) {
+    // Usar el método map() para aplicar la función a cada elemento del array
+    let array = numeros.map(x => x * 2);
+
+    return array;
+}
 function main() {
     const colores = ["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"];
     let numeros = [1, 2, 3, 4, 5]
@@ -250,9 +280,29 @@ function main() {
     contenidoJoin += `<p>Resultado al ejecutar el metodo => <span>${convertirArrayEnString(numeros)}</span></p>`;
     divJoin.innerHTML = contenidoJoin;
     //------------------Metodo keys()-----------------------------------------
+    const divKeys = document.getElementById("keys()");
+    let contenidoKeys = `<p>Array Incial -> <span> ${numeros}</span></p>`;
+    contenidoKeys += `<p>copia del metodo i sus parametros utilizados => <span>numeros.keys()</span></p>`;
+    contenidoKeys += `<p>Resultado al ejecutar el metodo => <span>${obtenerIteradorDeIndices(numeros)}</span></p>`;
+    divKeys.innerHTML = contenidoKeys;
     //------------------Metodo lastIndexOf()----------------------------------
+    const divLastIndexOf = document.getElementById("lastIndexOf()");
+    let contenidoLastIndexOf = `<p>Array Incial -> <span> ${numeros}</span></p>`;
+    contenidoLastIndexOf += `<p>copia del metodo i sus parametros utilizados => <span>numeros.lastIndexOf(4)</span></p>`;
+    contenidoLastIndexOf += `<p>Resultado al ejecutar el metodo => <span>${encontrarUltimoIndiceDeElemento(numeros, 4)}</span></p>`;
+    divLastIndexOf.innerHTML = contenidoLastIndexOf;
     //------------------Metodo length-----------------------------------------
+    const divLength = document.getElementById("length");
+    let contenidoLength = `<p>Array Incial -> <span> ${numeros}</span></p>`;
+    contenidoLength += `<p>copia del metodo i sus parametros utilizados => <span>numeros.length</span></p>`;
+    contenidoLength += `<p>Resultado al ejecutar el metodo => <span>${obtenerNumeroDeElementos(numeros)}</span></p>`;
+    divLength.innerHTML = contenidoLength;
     //------------------Metodo map()-----------------------------------------
+    const divMap = document.getElementById("map()");
+    let contenidoMap = `<p>Array Incial -> <span> ${numeros}</span></p>`;
+    contenidoMap += `<p>copia del metodo i sus parametros utilizados => <span>numeros.map(x => x * 2)</span></p>`;
+    contenidoMap += `<p>Resultado al ejecutar el metodo => <span>${aplicarFuncionANumeros(numeros)}</span></p>`;
+    divMap.innerHTML = contenidoMap;
     //------------------Metodo pop()-----------------------------------------
     //------------------Metodo prototype------------------------------------
     //------------------Metodo push()-----------------------------------------
