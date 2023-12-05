@@ -109,7 +109,13 @@ function comprobarSiIncluyeElemento(numeros, numero) {
 
     return incluye;
 }
+// Función que devuelve el índice de un elemento usando el método indexOf()
+function encontrarIndiceDeElemento(numeros, numero) {
+    // Usar el método indexOf() para encontrar el índice del número
+    let indice = numeros.indexOf(numero);
 
+    return indice;
+}
 
 function main() {
     const colores = ["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"];
@@ -213,6 +219,11 @@ function main() {
     contenidoIncludes += `<p>Resultado al ejecutar el metodo => <span>${comprobarSiIncluyeElemento(numeros, 2)}</span></p>`;
     divIncludes.innerHTML = contenidoIncludes;
     //------------------Metodo indexOf()--------------------------------------
+    const divIndexOf = document.getElementById("indexOf()");
+    let contenidoIndexOf = `<p>Array Incial -> <span> ${numeros}</span></p>`;
+    contenidoIndexOf += `<p>copia del metodo i sus parametros utilizados => <span>numeros.indexOf(4)</span></p>`;
+    contenidoIndexOf += `<p>Resultado al ejecutar el metodo => <span>${encontrarIndiceDeElemento(numeros, 4)}</span></p>`;
+    divIndexOf.innerHTML = contenidoIndexOf;
     //------------------Metodo isArray()--------------------------------------
     //------------------Metodo join()-----------------------------------------
     //------------------Metodo keys()-----------------------------------------
