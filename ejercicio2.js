@@ -83,6 +83,26 @@ function aplanarArrayDeNumerosConFlatMap(array) {
 
     return arrayAplanado;
 }
+// Funcion que ejecuta una funcion por cada elemento del array usando el metodo forEach()
+function ejecutarFuncionPorCadaElemento(numeros) {
+    // Crear una variable para almacenar el resultado
+    let resultado = "";
+    // Usar el método forEach() para recorrer el array
+    numeros.forEach(numero => {
+        // Concatenar cada número al resultado con un espacio
+        resultado += numero + " ";
+    });
+    // Devolver el resultado
+    return resultado;
+}
+// Función que crea un array a partir de un string usando el método from()
+function crearArrayDesdeString(string) {
+    // Usar el método from() para crear un array a partir del string
+    let array = Array.from(string);
+
+    return array;
+}
+
 
 function main() {
     const colores = ["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"];
@@ -167,8 +187,18 @@ function main() {
     contenidoFlatMap += `<p>Resultado al ejecutar el metodo => <span>${aplanarArrayDeNumerosConFlatMap(numeros)}</span></p>`;
     divFlatMap.innerHTML = contenidoFlatMap;
     //------------------METODO forEach() ------------------------------------
-
+    const divForEach = document.getElementById("forEach()");
+    let contenidoForEach = `<p>Array Incial -> <span> ${numeros}</span></p>`;
+    contenidoForEach += `<p>copia del metodo i sus parametros utilizados => <span>numeros.forEach(numero => {  resultado += numero + " ";  });
+    });</span></p>`;
+    contenidoForEach += `<p>Resultado al ejecutar el metodo => <span>${ejecutarFuncionPorCadaElemento(numeros)}</span></p>`;
+    divForEach.innerHTML = contenidoForEach;
     //------------------METODO from() ---------------------------------------
+    const divFrom = document.getElementById("from()");
+    let contenidoFrom = `<p>Array Incial -> <span> ${numeros}</span></p>`;
+    contenidoFrom += `<p>copia del metodo i sus parametros utilizados => <span>Array.from('jostin')</span></p>`;
+    contenidoFrom += `<p>Resultado al ejecutar el metodo => <span>${crearArrayDesdeString('jostin').join(', ')}</span></p>`;
+    divFrom.innerHTML = contenidoFrom;
     //------------------Metodo includes()------------------------------------
     //------------------Metodo indexOf()--------------------------------------
     //------------------Metodo isArray()--------------------------------------
