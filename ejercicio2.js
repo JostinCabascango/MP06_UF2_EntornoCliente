@@ -116,7 +116,20 @@ function encontrarIndiceDeElemento(numeros, numero) {
 
     return indice;
 }
+// Función que comprueba si un objeto es un array usando el método isArray()
+function comprobarSiEsArray(objeto) {
+    // Usar el método isArray() para comprobar si el objeto es un array
+    let esArray = Array.isArray(objeto);
 
+    return esArray;
+}
+// Función que convierte un array en un string usando el método join()
+function convertirArrayEnString(numeros) {
+    // Usar el método join() para convertir el array en un string
+    let string = numeros.join();
+
+    return string;
+}
 function main() {
     const colores = ["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"];
     let numeros = [1, 2, 3, 4, 5]
@@ -225,7 +238,17 @@ function main() {
     contenidoIndexOf += `<p>Resultado al ejecutar el metodo => <span>${encontrarIndiceDeElemento(numeros, 4)}</span></p>`;
     divIndexOf.innerHTML = contenidoIndexOf;
     //------------------Metodo isArray()--------------------------------------
+    const divIsArray = document.getElementById("isArray()");
+    let contenidoIsArray = `<p>Array Incial -> <span> ${numeros}</span></p>`;
+    contenidoIsArray += `<p>copia del metodo i sus parametros utilizados => <span>Array.isArray(numeros)</span></p>`;
+    contenidoIsArray += `<p>Resultado al ejecutar el metodo => <span>${comprobarSiEsArray(numeros)}</span></p>`;
+    divIsArray.innerHTML = contenidoIsArray;
     //------------------Metodo join()-----------------------------------------
+    const divJoin = document.getElementById("join()");
+    let contenidoJoin = `<p>Array Incial -> <span> ${numeros}</span></p>`;
+    contenidoJoin += `<p>copia del metodo i sus parametros utilizados => <span>numeros.join()</span></p>`;
+    contenidoJoin += `<p>Resultado al ejecutar el metodo => <span>${convertirArrayEnString(numeros)}</span></p>`;
+    divJoin.innerHTML = contenidoJoin;
     //------------------Metodo keys()-----------------------------------------
     //------------------Metodo lastIndexOf()----------------------------------
     //------------------Metodo length-----------------------------------------
