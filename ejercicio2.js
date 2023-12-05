@@ -79,7 +79,7 @@ function aplanarArrayDeNumeros(array) {
 // Función que aplica una funcion a cada elemento y despues aplana el resultat en un nuevo array
 function aplanarArrayDeNumerosConFlatMap(array) {
     // Usar el método flatMap() para aplanar el array
-    let arrayAplanado = array.flatMap(x => x, x * 2);
+    let arrayAplanado = array.flatMap(x => x * 2);
 
     return arrayAplanado;
 }
@@ -154,20 +154,20 @@ function main() {
     contenidoFindIndex += `<p>Resultado al ejecutar el metodo => <span>${encontrarIndiceDeColor(["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"])}</span></p>`;
     divFindIndex.innerHTML = contenidoFindIndex;
     //------------------METODO flat() ------------------------------------
-    const array = [1, 2, [3, 4, [5, 6]]];
+    const array = [1, 2, [3, [4, 5, 6], 7], 8];
     const divFlat = document.getElementById("flat()");
-    let contenidoFlat = `<p>Array Incial -> <span>${array.join(', ')}</span></p>`;
-    contenidoFlat += `<p>copia del metodo i sus parametros utilizados => <span>colores.findIndex(color => color === 'Marron')</span></p>`;
-    contenidoFlat += `<p>Resultado al ejecutar el metodo => <span>${aplanarArrayDeNumeros
-        ($array)}</span></p>`;
+    let contenidoFlat = `<p>Array Incial -> <span> [1, 2, [3, [4, 5, 6], 7], 8]</span></p>`;
+    contenidoFlat += `<p>copia del metodo i sus parametros utilizados => <span>array.flat()</span></p>`;
+    contenidoFlat += `<p>Resultado al ejecutar el metodo => <span>${aplanarArrayDeNumeros(array)}</span></p>`;
     divFlat.innerHTML = contenidoFlat;
     //------------------METODO flatMap() ------------------------------------
     const divFlatMap = document.getElementById("flatMap()");
-    let contenidoFlatMap = `<p>Array Incial -> <span>${array.join(', ')}</span></p>`;
-    contenidoFlatMap += ``;
-    contenidoFlatMap += `<p>Resultado al ejecutar el metodo => <span>${aplanarArrayDeNumerosConFlatMap($array)}</span></p>`;
+    let contenidoFlatMap = `<p>Array Incial -> <span> ${numeros}</span></p>`;
+    contenidoFlatMap += `<p>copia del metodo i sus parametros utilizados => <span>array.flatMap(x => x, x * 2)</span></p>`;
+    contenidoFlatMap += `<p>Resultado al ejecutar el metodo => <span>${aplanarArrayDeNumerosConFlatMap(numeros)}</span></p>`;
     divFlatMap.innerHTML = contenidoFlatMap;
     //------------------METODO forEach() ------------------------------------
+
     //------------------METODO from() ---------------------------------------
     //------------------Metodo includes()------------------------------------
     //------------------Metodo indexOf()--------------------------------------
