@@ -160,6 +160,14 @@ function aplicarFuncionANumeros(numeros) {
 
     return array;
 }
+// Función que elimina el último elemento de un array y devuelve ese elemento usando el método pop()
+function eliminarUltimoElemento(numeros) {
+    // Usar el método pop() para eliminar el último elemento del array
+    let ultimoElemento = numeros.pop();
+
+    return ultimoElemento;
+
+}
 function main() {
     const colores = ["Verde", "Rojo", "Amarillo", "Azul", "Negro", "Blanco"];
     let numeros = [1, 2, 3, 4, 5]
@@ -304,6 +312,11 @@ function main() {
     contenidoMap += `<p>Resultado al ejecutar el metodo => <span>${aplicarFuncionANumeros(numeros)}</span></p>`;
     divMap.innerHTML = contenidoMap;
     //------------------Metodo pop()-----------------------------------------
+    const divPop = document.getElementById("pop()");
+    let contenidoPop = `<p>Array Incial -> <span> ${numeros}</span></p>`;
+    contenidoPop += `<p>copia del metodo i sus parametros utilizados => <span>numeros.pop()</span></p>`;
+    contenidoPop += `<p>Resultado al ejecutar el metodo => <span>${eliminarUltimoElemento(numeros)}</span></p>`;
+    divPop.innerHTML = contenidoPop;
     //------------------Metodo prototype------------------------------------
     //------------------Metodo push()-----------------------------------------
     //------------------Metodo reduce()-----------------------------------------
