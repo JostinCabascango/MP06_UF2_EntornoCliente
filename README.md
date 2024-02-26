@@ -17,5 +17,4 @@ Además, se debe crear una segunda función JavaScript que muestre un ejemplo de
 Los métodos de los Arrays que se deben probar son: `at()`, `concat()`, `constructor`, `copyWithin()`, `entries()`, `every()`, `fill()`, `filter()`, `find()`, `findIndex()`, `flat()`, `flatMap()`, `forEach()`, `from()`, `includes()`, `indexOf()`, `isArray()`, `join()`, `keys()`, `lastIndexOf()`, `length`, `map()`, `pop()`, `prototype`, `push()`, `reduce()`, `reduceRight()`, `reverse()`, `shift()`, `slice()`, `some()`, `sort()`, `splice()`, `toString()`, `unshift()`, `valueOf()`.
 
 ## Ejecución
-
 Para ejecutar las funciones, se debe abrir el `index.html`.
